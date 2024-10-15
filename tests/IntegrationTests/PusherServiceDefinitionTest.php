@@ -108,7 +108,7 @@ final class PusherServiceDefinitionTestKernel extends LopiPusherTestKernel
 {
     public $compilerPass;
 
-    protected function build(ContainerBuilder $container)
+    protected function build(ContainerBuilder $container): void
     {
         $container->addCompilerPass($this->compilerPass);
         $container->register(ChannelAuthenticator::class);
